@@ -17,7 +17,7 @@ public class TestController {
 
     @GetMapping("/hello")
     public String sayHello() {
-        return "Hello World! I'm the first test attempt of Expense Tracker with AI application " + apiKey;
+        return "Hello World! I'm the first test attempt of Expense Tracker with AI application ";
     }
     
     @Autowired

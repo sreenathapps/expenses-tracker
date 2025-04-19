@@ -42,9 +42,8 @@ public class AIService implements AIRepository {
             JSONObject content = new JSONObject();
             JSONArray parts = new JSONArray();
             JSONObject part = new JSONObject();
-
             part.put("text",
-                    "Categorize this expense in ONE word (Food, Travel, Shopping, Entertainment, Bills, Electronics, Other): "
+                    "Categorize this expense in ONE word (Transportation,Housing,Shopping,Entertainment,Utilities,Healthcare,Other):"
                             + description);
             parts.put(part);
             content.put("role", "user");
@@ -87,6 +86,7 @@ public class AIService implements AIRepository {
             }
 
         } catch (Exception e) {
+            System.out.println(e.toString());
             return "Other";
         }
 
